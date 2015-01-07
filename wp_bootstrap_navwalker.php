@@ -16,7 +16,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
    * @param string $output Passed by reference. Used to append additional content.
    * @param int $depth Depth of page. Used for padding.
    */
-    public function start_lvl( &$output, $depth = 0, $args = [] ) {
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {
       parent::start_lvl($output, $depth, $args);
       $pos = strrpos($output, '">', -1);
       $output = substr_replace(
